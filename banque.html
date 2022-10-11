@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="banque.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body id ="body">
+    <header>
+      <nav class="nav">
+        <a href="#acceuil" class="logo">$$$</a>
+
+        <div class="hamburger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+
+        <div class="nav__link hide">
+          <a href="#acceuil">home</a>
+          <a href="#tonCompte">Compte</a>
+        </div>
+      </nav>
+    </header>
+    <section class="acceuil" id="acceuil">
+      <h1 class="titreAcceuil">VoltaBanque</h1>
+      <h4 class="slogan">"Même les voleurs ont besoin d'une banque"</h4>
+      <div class="gererMonCompteDiv">
+        <button class="gererMonCompteBtn"><a href=#tonCompte>ENTRE</a></button>
+      </div>
+    </section>
+    <section class="tonCompte" id="tonCompte">
+      <div class="tonCompteEntreManuelle">
+        <div>
+          <h3>T'as bien travaillé? Mets en sécurité* :</h3>
+          <input id="positifInput"/>
+          <button id="positifBtn" type="submit">Valider</button>
+        </div>
+      </div>
+      <div class="tonCompteMouvement">
+        <div>
+          <h3>T'as des frais? Combien? PARLE</h3>
+          <input id="negatifInput" />
+          <button id="negatifBtn">Valider</button>
+        </div>
+      </div>
+    </section>
+    <section class="lesSousSous">
+      <div  >
+        <h2 class="lesSousSolde">
+          <span id="lesSousSolde">404</span>&euro;
+        </h2>
+        <p id="arnaqueLaBanque"></p>
+      </div>
+
+      <div>
+        <p class="lesSousOperation" id="lesSousOperation">Ca bouge sur le compte :</p>
+      </div>
+    </section>
+    <footer>
+      <p>*la banque n'est pas responsable de problèmes de sécurité</p>
+      <p>Se plaindre ==><a id="sePlaindre">ici</a></p>
+      <p>Dorian</p>
+      <p>2020</p>
+    </footer>
+
+    <script src="banque.js"></script>
+  </body>
+</html>
