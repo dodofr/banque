@@ -43,14 +43,16 @@ negatifBtn.addEventListener("click", () => {
   let recuperationNombreSousSolde = lesSousSolde.innerHTML;
   let nombreUtilisableSousSolde = parseInt(recuperationNombreSousSolde);
   if (nombreUtilisableSousSolde > 0) {
-    affichageOperationNegative();
-
     let a = parseInt(negatifInput.value);
     let b = nombreUtilisableSousSolde;
     let calcule = b - a;
     if (calcule > 0) {
+      affichageOperationNegative();
       lesSousSolde.innerHTML = calcule;
+      monCompteALinstantT.pop();
+      monCompteALinstantT.push(calcule);
     } else {
+      affichageTentativeArnaque();
       arnaquelaBanque();
     }
   }
@@ -68,6 +70,12 @@ function affichageOperationNegative() {
   let operationenCours = document.createElement("p");
   operationenCours.setAttribute("class", "red");
   operationenCours.innerHTML += "-" + negatifInput.value + "&euro;";
+  lesSousOperation.appendChild(operationenCours);
+}
+function affichageTentativeArnaque(){
+  let operationenCours = document.createElement("p");
+  operationenCours.setAttribute("class", "red");
+  operationenCours.innerHTML += "refusé et mise à 0&euro; du compte";
   lesSousOperation.appendChild(operationenCours);
 }
 // lorsque votre solde va étre negatif
