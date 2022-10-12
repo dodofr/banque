@@ -26,16 +26,32 @@ let monCompteALinstantT = [404];
 // valider son solde positif
 positifBtn.addEventListener("click", () => {
   arnaqueLaBanque.innerHTML = "";
-  affichageOperationPositive();
+  // affichageOperationPositive();
   let recuperationNombreSousSolde = lesSousSolde.innerHTML;
   let nombreUtilisableSousSolde = parseInt(recuperationNombreSousSolde);
-  let a = parseInt(positifInput.value);
-  let b = nombreUtilisableSousSolde;
-  let calcule = a + b;
-  lesSousSolde.innerHTML = calcule;
-  monCompteALinstantT.pop();
-  monCompteALinstantT.push(calcule);
-  console.log(monCompteALinstantT);
+  // let a = parseInt(positifInput.value);
+  // let b = nombreUtilisableSousSolde;
+  // let calcule = a + b;
+  // lesSousSolde.innerHTML = calcule;
+  // monCompteALinstantT.pop();
+  // monCompteALinstantT.push(calcule);
+  // console.log(monCompteALinstantT);
+  //
+  if (nombreUtilisableSousSolde >= 0) {
+    
+    let a = parseInt(positifInput.value);
+    let b = nombreUtilisableSousSolde;
+    let calcule = a + b;
+    if (calcule > 0) {
+      affichageOperationPositive();;
+      lesSousSolde.innerHTML = calcule;
+      monCompteALinstantT.pop();
+      monCompteALinstantT.push(calcule);
+    } else {
+      affichageTentativeArnaque();
+      arnaquelaBanque();
+    }
+  }//
 });
 
 // valider son solde negatif
@@ -82,7 +98,7 @@ function affichageTentativeArnaque(){
 function arnaquelaBanque() {
   arnaqueLaBanque.setAttribute("class", "darkred");
   arnaqueLaBanque.innerHTML =
-    "TU T'ES CRU OU? ON FAIT PAS CREDIT ICI" +
+    "TU T'ES CRU OU? Ni crédits Ni petits malins qui veulent arnaquer la banque" +
     "<br>" +
     "On s'est servi pour la peine, t'as intérêt de te remettre à flot !";
   lesSousSolde.innerHTML = "0";
@@ -146,7 +162,7 @@ let conversionDevise = document.getElementById("conversionDevise");
 let extradition = document.getElementById("extradition");
 let d = conversionDevise.value;
 var myHeaders = new Headers();
-myHeaders.append("apikey", "jVXvMR4LzXsMw9DFs0wZg35lhiCKkZsr");
+myHeaders.append("apikey", "EocLfZlNdEdWowlL1ACTBvaHeiTjNd59");
 
 var requestOptions = {
   method: "GET",
