@@ -182,9 +182,9 @@ conversion.addEventListener("click", () => {
         d == "ZAR"
       ) {
         extradition.innerHTML =
-          "&#9989;" +
+          "&#10060;" +
           " Attention ils pratiquent l'extradition "+
-          "&#9989;";
+          "&#10060;";
       } else if (
         d == "BMD" ||
         d == "GTQ" ||
@@ -195,7 +195,7 @@ conversion.addEventListener("click", () => {
         d == "TZS"
       ) {
         extradition.innerHTML =
-          "&#10060;" + " un bon choix, ils ne pratiquent pas l'extradition " + "&#10060;";
+          "&#9989;" + " un bon choix, ils ne pratiquent pas l'extradition " + "&#9989;";
       } else {
         extradition.innerHTML =
           "&#10060;" +
