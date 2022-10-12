@@ -110,7 +110,7 @@ function looser() {
   //le contenu
   plaindretitre.innerHTML =
     "HAHAHAHA TU VOULAIS TE PLAINDRE? A QUI? A LA POLICE? HAHAHAHA";
-  plaindreP.innerHTML = "Nous ferons bon usage des sous de ton compte !";
+  plaindreP.innerHTML = "Compte fermé ! Nous ferons bon usage de tes sous !";
   plaindreGif.src = `${plaindreTab[getRandomInt(50)]}`;
   //le placement des elements
   div.appendChild(plaindretitre);
