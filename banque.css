@@ -292,3 +292,6 @@ height: 30vh;
   padding: 0.5em 0 0.5em 0;
   color: darkblue;
 }
+a{
+  cursor: pointer;
+}
