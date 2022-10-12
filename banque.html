@@ -11,7 +11,7 @@
     />
     <title>Document</title>
   </head>
-  <body id ="body">
+  <body id="body">
     <header>
       <nav class="nav">
         <a href="#acceuil" class="logo">$$$</a>
@@ -23,8 +23,9 @@
         </div>
 
         <div class="nav__link hide">
-          <a href="#acceuil">home</a>
+          <a href="#acceuil">Acceuil</a>
           <a href="#tonCompte">Compte</a>
+          <a href="#sectionConversion">Conversion</a>
         </div>
       </nav>
     </header>
@@ -32,14 +33,16 @@
       <h1 class="titreAcceuil">VoltaBanque</h1>
       <h4 class="slogan">"Même les voleurs ont besoin d'une banque"</h4>
       <div class="gererMonCompteDiv">
-        <button class="gererMonCompteBtn"><a href=#tonCompte>ENTRE</a></button>
+        <button class="gererMonCompteBtn">
+          <a href="#tonCompte">ENTRE</a>
+        </button>
       </div>
     </section>
     <section class="tonCompte" id="tonCompte">
       <div class="tonCompteEntreManuelle">
         <div>
           <h3>T'as bien travaillé? Mets en sécurité* :</h3>
-          <input id="positifInput"/>
+          <input id="positifInput" />
           <button id="positifBtn" type="submit">Valider</button>
         </div>
       </div>
@@ -52,16 +55,50 @@
       </div>
     </section>
     <section class="lesSousSous">
-      <div  >
-        <h2 class="lesSousSolde">
-          <span id="lesSousSolde">404</span>&euro;
-        </h2>
+      <div>
+        <h2 class="lesSousSolde"><span id="lesSousSolde">404</span>&euro;</h2>
         <p id="arnaqueLaBanque"></p>
       </div>
 
       <div>
-        <p class="lesSousOperation" id="lesSousOperation">Ca bouge sur le compte :</p>
+        <p class="lesSousOperation" id="lesSousOperation">
+          Ca bouge sur le compte :
+        </p>
       </div>
+    </section>
+    <section class="sectionConversion" id="sectionConversion">
+      <h2 class="conversionCss titre">
+        t'as la flicaille aux trousses? fait toi oublier, change de pays !
+      </h2>
+
+      <label for="conversionDevise">Selectionne la devise que tu veux</label>
+      <select name="monnaie" id="conversionDevise">
+        <option value="GBP">British Pound Sterling</option>
+        <option value="USD">United States Dollar</option>
+        <option value="AUD">Australian Dollar</option>
+        <option value="BGN">Bulgarian Lev</option>
+        <option value="BMD">Bermudan Dollar</option>
+        <option value="BRL">Brazilian Real</option>
+        <option value="CNY">Chinese Yuan</option>
+        <option value="GTQ">Guatemalan Quetzal</option>
+        <option value="IDR">Indonesian Rupia</option>
+        <option value="JMD">Jamaican Dollar</option>
+        <option value="KPW">North Korean Won</option>
+        <option value="MXN">Mexican Peso</option>
+        <option value="SLL">Somali Shilling</option>
+        <option value="THB">Thai Baht</option>
+        <option value="TZS">Tanzanian Shillin</option>
+        <option value="ZAR">South African Rand</option>
+        <option value="BTC">Bitcoin</option>
+      </select>
+      <a id="conversion" class="conversionCss">&#129308; Valide &#129307;</a>
+      <p id="conversionAffichage" class="conversionCss"></p>
+      <p id="extradition" class="conversionCss"></p>
+      <img
+        class="imgConversion"
+        src="https://media.gettyimages.com/vectors/cartoon-cop-and-crook-vector-id165759686?s=2048x2048"
+        alt="imagepolice"
+      />
     </section>
     <footer>
       <p>*la banque n'est pas responsable de problèmes de sécurité</p>
