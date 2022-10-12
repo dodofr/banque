@@ -230,6 +230,11 @@ h3 {
   color: darkgoldenrod;
   font-size: 1em;
 }
+.lesSousCompte{
+  text-align: center;
+  font-size: 1.8em;
+  color: darkgoldenrod;
+}
 /*class rajout js */
 .red {
   color: red;
