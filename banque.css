@@ -254,6 +254,11 @@ h3 {
   text-align: left;
   font-size: 0.2em;
 }
+.securiteBasDePageZoom{
+  font-size: 1em;
+  text-align: left;
+  color: red;
+}
 /* plaindre */
 .plaindreDiv {
   text-align: center;

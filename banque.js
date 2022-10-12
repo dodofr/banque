@@ -1,3 +1,4 @@
+window.addEventListener("DOMContentLoaded", (event) => {
 //menu navbar
 const hamburger = document.querySelector(".hamburger");
 const navLink = document.querySelector(".nav__link");
@@ -154,9 +155,11 @@ let conversionVef = document.getElementById("conversionVef");
 let conversionDevise = document.getElementById("conversionDevise");
 let extradition = document.getElementById("extradition");
 let d = conversionDevise.value;
+let idP=conversionDevise.options[conversionDevise.selectedIndex].id;
+
 var myHeaders = new Headers();
 myHeaders.append("apikey", "EocLfZlNdEdWowlL1ACTBvaHeiTjNd59");
-
+//clef de rechange : jVXvMR4LzXsMw9DFs0wZg35lhiCKkZsr
 var requestOptions = {
   method: "GET",
   redirect: "follow",
@@ -173,6 +176,7 @@ conversion.addEventListener("click", () => {
     .then((result) => {
       // console.log(result.result)
       let d = conversionDevise.value;
+      let idP=conversionDevise.options[conversionDevise.selectedIndex].id;
       conversionAffichage.innerHTML =
         "Avec " +
         monCompteALinstantT[0] +
@@ -191,8 +195,8 @@ conversion.addEventListener("click", () => {
         d == "ZAR"
       ) {
         extradition.innerHTML =
-          "&#10060;" +
-          " Attention ils pratiquent l'extradition "+
+          "&#10060;" +idP+
+          ", Attention ils pratiquent l'extradition "+
           "&#10060;";
       } else if (
         d == "BMD" ||
@@ -204,11 +208,16 @@ conversion.addEventListener("click", () => {
         d == "TZS"
       ) {
         extradition.innerHTML =
-          "&#9989;" + " un bon choix, ils ne pratiquent pas l'extradition " + "&#9989;";
-      } else {
+          "&#9989;" +idP+ ", un bon choix, ils ne pratiquent pas l'extradition " + "&#9989;";
+      } else if (
+        d == "BTC" 
+      ) {
         extradition.innerHTML =
-          "&#10060;" +
-          " Méfie toi, ils pratiquent l'extradition quand bon leur semble " +
+          "&#9989;" +idP+ ", Sur internet tout est possible mon ami " + "&#9989;";
+      }else {
+        extradition.innerHTML =
+          "&#10060;" +idP+
+          ", Méfie toi, ils pratiquent l'extradition quand bon leur semble " +
           "&#9989;";
       }
     })
@@ -218,3 +227,13 @@ conversion.addEventListener("click", () => {
 //   .then(response => response.text())
 //   .then(result => console.log(result))
 //   .catch(error => console.log('error', error));
+//Montrer le message *
+let securiteBas = document.getElementById("securiteBasDePage")
+
+securiteBas.addEventListener("mouseenter", () => {
+  securiteBas.setAttribute("class","securiteBasDePageZoom")
+})
+securiteBas.addEventListener("mouseleave", ()=>{
+  securiteBas.setAttribute("class","securiteBasDePage")
+})
+});
