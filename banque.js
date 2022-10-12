@@ -26,17 +26,10 @@ let monCompteALinstantT = [404];
 // valider son solde positif
 positifBtn.addEventListener("click", () => {
   arnaqueLaBanque.innerHTML = "";
-  // affichageOperationPositive();
+  
   let recuperationNombreSousSolde = lesSousSolde.innerHTML;
   let nombreUtilisableSousSolde = parseInt(recuperationNombreSousSolde);
-  // let a = parseInt(positifInput.value);
-  // let b = nombreUtilisableSousSolde;
-  // let calcule = a + b;
-  // lesSousSolde.innerHTML = calcule;
-  // monCompteALinstantT.pop();
-  // monCompteALinstantT.push(calcule);
-  // console.log(monCompteALinstantT);
-  //
+
   if (nombreUtilisableSousSolde >= 0) {
     
     let a = parseInt(positifInput.value);

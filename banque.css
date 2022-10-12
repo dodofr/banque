@@ -47,10 +47,9 @@ a {
 
 .nav__link {
   position: fixed;
-  width: 94%;
-  top: 5rem;
-  left: 18px;
-  background-color: lightblue;
+  width: 100%;
+  top: 4rem;
+  background-color: rgb(3, 67, 88);
 }
 
 .nav__link a {
@@ -60,7 +59,7 @@ a {
 }
 
 .nav__link a:hover {
-  background-color: lightcoral;
+  background-color: rgb(70, 49, 226);
 }
 
 .hide {
@@ -244,6 +243,10 @@ h3 {
 .sectionConversion {
   text-align: center;
 }
+.securiteBasDePage{
+  text-align: left;
+  font-size: 0.2em;
+}
 /* plaindre */
 .plaindreDiv {
   text-align: center;
@@ -275,6 +278,7 @@ footer {
   .tonCompteMouvement {
     height: 35vh;
   }
+ 
 }
 /* conversion */
 .sectionConversion {
