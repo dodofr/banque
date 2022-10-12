@@ -183,7 +183,7 @@ conversion.addEventListener("click", () => {
       ) {
         extradition.innerHTML =
           "&#9989;" +
-          " un bon choix, ils ne pratiquent pas l'extradition " +
+          " Attention ils pratiquent l'extradition "+
           "&#9989;";
       } else if (
         d == "BMD" ||
@@ -195,7 +195,7 @@ conversion.addEventListener("click", () => {
         d == "TZS"
       ) {
         extradition.innerHTML =
-          "&#10060;" + " Attention ils pratiquent l'extradition " + "&#10060;";
+          "&#10060;" + " un bon choix, ils ne pratiquent pas l'extradition " + "&#10060;";
       } else {
         extradition.innerHTML =
           "&#10060;" +
